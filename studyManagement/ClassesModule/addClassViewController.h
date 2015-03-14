@@ -27,4 +27,7 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UILabel *numberOfTeachers;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfSubjects;
 @property (strong, nonatomic) NSArray *selectedSubjects;
+@property id <modalControllerDelegate> pushNavigationDelegate;
+@property (weak, nonatomic) IBOutlet UITextField *classNameTextField;
+
 @end

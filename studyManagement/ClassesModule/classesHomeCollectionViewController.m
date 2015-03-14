@@ -8,7 +8,7 @@
 
 #import "classesHomeCollectionViewController.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "addClassViewController.h"
 
 @interface classesHomeCollectionViewController ()
 
@@ -20,12 +20,18 @@ static NSString * const reuseIdentifier = @"customClassCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.classesArray = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.collectionView reloadData];
+}
+
 
 /*
 #pragma mark - Navigation
@@ -45,15 +51,19 @@ static NSString * const reuseIdentifier = @"customClassCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 12;
+    return [self.classesArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     classesHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    [cell.collectionCellLabel setText:[NSString stringWithFormat:@"%ld",indexPath.row + 1]];
+    
+   NSDictionary *classData = [self.classesArray objectAtIndex:indexPath.row];
+    NSDictionary *clsData = [classData valueForKey:@"classData"];
+    
+    [cell.collectionCellLabel setText:[clsData valueForKey:@"className"]];
 
-    [cell.collectionviewDetailCell setText:@"Detail"];
+    [cell.collectionviewDetailCell setText:[clsData valueForKey:@"classStandard"]];
     
     // Configure the cell
     
@@ -93,5 +103,58 @@ static NSString * const reuseIdentifier = @"customClassCell";
 	
 }
 */
+
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if([segue.identifier isEqualToString:@"addClass"]){
+        addClassViewController *addClassViewcontroller = [segue destinationViewController];
+        addClassViewcontroller.pushNavigationDelegate = self;
+    }
+    else if([segue.identifier isEqualToString:@"studentSegue"]){
+
+    }
+    else if([segue.identifier isEqualToString:@"teachersSegue"]){
+
+    }
+    else if([segue.identifier isEqualToString:@"subjectsSegue"]){
+
+    }
+    
+}
+- (void)modalControllerDismissedWithValue:(NSArray *)valueSelected{
+//    switch (selectedButton) {
+//        case StudentSelected:
+//        {
+//            self.selectedStudents = valueSelected;
+//        }
+//            break;
+//        case TeacherSelected:
+//        {
+//            self.selectedTeachers = valueSelected;
+//        }
+//            break;
+//        case SubjectSelected:
+//        {
+//            self.selectedSubjects = valueSelected;
+//        }
+//            break;
+//        case StandardSelected:
+//        {
+//            [self.showStandardDataSelected setTitle:[valueSelected objectAtIndex:0] forState:UIControlStateNormal];
+//        }
+//            break;
+//        default:
+//            break;
+//    }
+    
+    [self.classesArray addObject:[valueSelected objectAtIndex:0]];
+    
+}
+
+
 
 @end

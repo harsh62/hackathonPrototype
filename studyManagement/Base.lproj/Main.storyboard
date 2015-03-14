@@ -690,14 +690,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Std" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M08-3r-XBn">
-                                            <rect key="frame" x="110" y="39" width="42" height="21"/>
+                                            <rect key="frame" x="8" y="39" width="144" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qfG-so-Whi">
-                                            <rect key="frame" x="45" y="62" width="107" height="21"/>
+                                            <rect key="frame" x="8" y="62" width="144" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -721,7 +721,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="SMm-Cg-Bh4"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FVn-sg-McY">
                             <connections>
-                                <segue destination="een-xy-jIL" kind="push" id="Rli-oh-U2k"/>
+                                <segue destination="een-xy-jIL" kind="push" identifier="addClass" id="Rli-oh-U2k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -892,9 +892,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Class" id="ahJ-mr-Vwc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="P8L-0d-PfU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="P8L-0d-PfU">
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="een-xy-jIL" id="Elh-PU-sYL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="classNameTextField" destination="84r-ts-K2n" id="8mx-Ow-4AW"/>
                         <outlet property="numberOfStudents" destination="Wwb-Z8-qtK" id="LtG-LD-5L3"/>
                         <outlet property="numberOfSubjects" destination="NzS-yZ-EHI" id="i2K-8O-PaX"/>
                         <outlet property="numberOfTeachers" destination="8Ad-GU-AOG" id="aGp-SX-s6h"/>
@@ -903,7 +908,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyP-py-gcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="1579"/>
+            <point key="canvasLocation" x="762" y="1419"/>
         </scene>
         <!--Show Teacher Table View Controller-->
         <scene sceneID="r2k-fy-WMX">

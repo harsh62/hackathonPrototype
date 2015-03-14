@@ -10,5 +10,5 @@
 #import "classesHomeCollectionViewCell.h"
 
 @interface classesHomeCollectionViewController : UICollectionViewController
-
+@property (strong, nonatomic) NSMutableArray *classesArray;
 @end

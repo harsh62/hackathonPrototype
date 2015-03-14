@@ -101,5 +101,15 @@
     
 }
 
+- (IBAction)saveButtonClicked:(id)sender {
+    NSDictionary *dictOfClass = @{
+                                  @"className":self.classNameTextField.text,
+                                  @"classStandard":self.showStandardDataSelected.titleLabel.text
+                                  };
+    NSDictionary *dictionaryOfClass = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:dictOfClass,self.selectedStudents,self.selectedSubjects, self.selectedTeachers, nil] forKeys:[NSArray arrayWithObjects:@"classData",@"students",@"subjects",@"teachers", nil]];
+    
+    [self.pushNavigationDelegate modalControllerDismissedWithValue:[NSArray arrayWithObject:dictionaryOfClass]];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
