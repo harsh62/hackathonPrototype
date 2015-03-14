@@ -64,7 +64,7 @@ static NSString * const reuseIdentifier = @"customClassCell";
     [cell.collectionCellLabel setText:[clsData valueForKey:@"className"]];
 
     [cell.collectionviewDetailCell setText:[clsData valueForKey:@"classStandard"]];
-    
+
     // Configure the cell
     
     cell.layer.borderColor = [UIColor lightGrayColor].CGColor;

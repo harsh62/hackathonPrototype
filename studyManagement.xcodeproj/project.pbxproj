@@ -48,6 +48,16 @@
 		CE1398BD1AB4D0D2001D2E66 /* addClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1398B51AB4D0D2001D2E66 /* addClassViewController.m */; };
 		CE1398BE1AB4D0D2001D2E66 /* standardClassesSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1398B71AB4D0D2001D2E66 /* standardClassesSelectionTableViewController.m */; };
 		CE1398BF1AB4D0D2001D2E66 /* classesHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1398BA1AB4D0D2001D2E66 /* classesHomeCollectionViewCell.m */; };
+		CE1398CA1AB4D357001D2E66 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C11AB4D357001D2E66 /* 1.png */; };
+		CE1398CB1AB4D357001D2E66 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C21AB4D357001D2E66 /* 2.png */; };
+		CE1398CC1AB4D357001D2E66 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C31AB4D357001D2E66 /* 3.png */; };
+		CE1398CD1AB4D357001D2E66 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C41AB4D357001D2E66 /* 4.png */; };
+		CE1398CE1AB4D357001D2E66 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C51AB4D357001D2E66 /* 5.png */; };
+		CE1398CF1AB4D357001D2E66 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C61AB4D357001D2E66 /* 6.png */; };
+		CE1398D01AB4D357001D2E66 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C71AB4D357001D2E66 /* 7.png */; };
+		CE1398D11AB4D357001D2E66 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C81AB4D357001D2E66 /* 8.png */; };
+		CE1398D21AB4D357001D2E66 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1398C91AB4D357001D2E66 /* 9.png */; };
+		CE1398D91AB4D7BF001D2E66 /* ProfileViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1398D81AB4D7BF001D2E66 /* ProfileViewTableViewController.m */; };
 		CE4F8F221AB41AED00F5062D /* Collage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F211AB41AED00F5062D /* Collage.jpg */; };
 		CE4F8F281AB42F8D00F5062D /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4F8F271AB42F8D00F5062D /* Utility.m */; };
 		CE4F8F2E1AB4354E00F5062D /* transparentTeach.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F2D1AB4354E00F5062D /* transparentTeach.png */; };
@@ -148,6 +158,17 @@
 		CE1398B81AB4D0D2001D2E66 /* classesHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = classesHomeCollectionViewCell.h; path = studyManagement/ClassesModule/classesHomeCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
 		CE1398B91AB4D0D2001D2E66 /* standardClassesSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = standardClassesSelectionTableViewController.h; path = studyManagement/ClassesModule/standardClassesSelectionTableViewController.h; sourceTree = SOURCE_ROOT; };
 		CE1398BA1AB4D0D2001D2E66 /* classesHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = classesHomeCollectionViewCell.m; path = studyManagement/ClassesModule/classesHomeCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		CE1398C11AB4D357001D2E66 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = numberIcons/1.png; sourceTree = "<group>"; };
+		CE1398C21AB4D357001D2E66 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = numberIcons/2.png; sourceTree = "<group>"; };
+		CE1398C31AB4D357001D2E66 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = numberIcons/3.png; sourceTree = "<group>"; };
+		CE1398C41AB4D357001D2E66 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = numberIcons/4.png; sourceTree = "<group>"; };
+		CE1398C51AB4D357001D2E66 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5.png; path = numberIcons/5.png; sourceTree = "<group>"; };
+		CE1398C61AB4D357001D2E66 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6.png; path = numberIcons/6.png; sourceTree = "<group>"; };
+		CE1398C71AB4D357001D2E66 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 7.png; path = numberIcons/7.png; sourceTree = "<group>"; };
+		CE1398C81AB4D357001D2E66 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8.png; path = numberIcons/8.png; sourceTree = "<group>"; };
+		CE1398C91AB4D357001D2E66 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 9.png; path = numberIcons/9.png; sourceTree = "<group>"; };
+		CE1398D71AB4D7BF001D2E66 /* ProfileViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewTableViewController.h; sourceTree = "<group>"; };
+		CE1398D81AB4D7BF001D2E66 /* ProfileViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewTableViewController.m; sourceTree = "<group>"; };
 		CE4F8F211AB41AED00F5062D /* Collage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Collage.jpg; sourceTree = "<group>"; };
 		CE4F8F261AB42F8D00F5062D /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		CE4F8F271AB42F8D00F5062D /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
@@ -465,9 +486,35 @@
 			name = loginIcons;
 			sourceTree = "<group>";
 		};
+		CE1398C01AB4D348001D2E66 /* numbers */ = {
+			isa = PBXGroup;
+			children = (
+				CE1398C11AB4D357001D2E66 /* 1.png */,
+				CE1398C21AB4D357001D2E66 /* 2.png */,
+				CE1398C31AB4D357001D2E66 /* 3.png */,
+				CE1398C41AB4D357001D2E66 /* 4.png */,
+				CE1398C51AB4D357001D2E66 /* 5.png */,
+				CE1398C61AB4D357001D2E66 /* 6.png */,
+				CE1398C71AB4D357001D2E66 /* 7.png */,
+				CE1398C81AB4D357001D2E66 /* 8.png */,
+				CE1398C91AB4D357001D2E66 /* 9.png */,
+			);
+			name = numbers;
+			sourceTree = "<group>";
+		};
+		CE1398D31AB4D6FE001D2E66 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE1398D71AB4D7BF001D2E66 /* ProfileViewTableViewController.h */,
+				CE1398D81AB4D7BF001D2E66 /* ProfileViewTableViewController.m */,
+			);
+			name = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		CE4F8F201AB41AED00F5062D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE1398C01AB4D348001D2E66 /* numbers */,
 				98F13B5A1AB4CFCC00430BFB /* checkmarkOff.png */,
 				98F13B5B1AB4CFCC00430BFB /* checkmarkOff@2x.png */,
 				98F13B5C1AB4CFCC00430BFB /* checkmarkOn.png */,
@@ -508,6 +555,7 @@
 		CEE32EC41AB4129E0002AEAB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE1398D31AB4D6FE001D2E66 /* ProfileViewController */,
 				CE1398971AB48DF4001D2E66 /* SideView */,
 				98F13A681AB36CC100430BFB /* HomeViewController */,
 				CE13988C1AB4667A001D2E66 /* UpdateProfile */,
@@ -610,14 +658,22 @@
 				98DCBB001AB35D8A00AC5D8A /* Main.storyboard in Resources */,
 				98F13B611AB4CFCC00430BFB /* checkmarkOn@2x.png in Resources */,
 				98F13B5E1AB4CFCC00430BFB /* checkmarkOff.png in Resources */,
+				CE1398D21AB4D357001D2E66 /* 9.png in Resources */,
+				CE1398D01AB4D357001D2E66 /* 7.png in Resources */,
+				CE1398CF1AB4D357001D2E66 /* 6.png in Resources */,
+				CE1398CD1AB4D357001D2E66 /* 4.png in Resources */,
+				CE1398CC1AB4D357001D2E66 /* 3.png in Resources */,
 				CE4F8F371AB4397E00F5062D /* calendar.png in Resources */,
+				CE1398CB1AB4D357001D2E66 /* 2.png in Resources */,
 				CE4F8F221AB41AED00F5062D /* Collage.jpg in Resources */,
 				CE4F8F2E1AB4354E00F5062D /* transparentTeach.png in Resources */,
 				CE4F8F461AB4613100F5062D /* Launch.xib in Resources */,
 				CE4F8F3C1AB4397E00F5062D /* students.png in Resources */,
+				CE1398CE1AB4D357001D2E66 /* 5.png in Resources */,
 				CE13989F1AB4B5D6001D2E66 /* user91.png in Resources */,
 				CE1398A11AB4BA7E001D2E66 /* multiple25.png in Resources */,
 				CE4F8F3D1AB4397E00F5062D /* todo.png in Resources */,
+				CE1398CA1AB4D357001D2E66 /* 1.png in Resources */,
 				CE4F8F381AB4397E00F5062D /* menu.png in Resources */,
 				CE4F8F3A1AB4397E00F5062D /* school.png in Resources */,
 				CE13988B1AB464BA001D2E66 /* background.jpg in Resources */,
@@ -627,6 +683,7 @@
 				98F13B601AB4CFCC00430BFB /* checkmarkOn.png in Resources */,
 				CE4F8F3F1AB439BE00F5062D /* logout.png in Resources */,
 				CE13989E1AB4B5D6001D2E66 /* key63.png in Resources */,
+				CE1398D11AB4D357001D2E66 /* 8.png in Resources */,
 				CE4F8F411AB43BB900F5062D /* menuLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,6 +730,7 @@
 				CE1398BD1AB4D0D2001D2E66 /* addClassViewController.m in Sources */,
 				98F13A6E1AB36CEF00430BFB /* HomeViewController.m in Sources */,
 				98F13A711AB36D0800430BFB /* SideViewController.m in Sources */,
+				CE1398D91AB4D7BF001D2E66 /* ProfileViewTableViewController.m in Sources */,
 				CE1398BF1AB4D0D2001D2E66 /* classesHomeCollectionViewCell.m in Sources */,
 				CE1398BC1AB4D0D2001D2E66 /* DetailClassViewController.m in Sources */,
 				98F13B471AB461D100430BFB /* Students.m in Sources */,
