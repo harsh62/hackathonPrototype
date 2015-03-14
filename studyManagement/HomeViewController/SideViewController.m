@@ -35,9 +35,15 @@
     if(indexPath.row == 3){
         [self.sideNavigationDelegate sideNavProfileSelected];
     }
-//    else if (indexPath.row == 6){
-//        [self.sideNavigationDelegate navigateToChatRoom];
-//    }
+    else if (indexPath.row == 1){
+        [self.sideNavigationDelegate profileButtonClicked];
+    }
+    else if (indexPath.row == 2){
+        [self.sideNavigationDelegate connectButtonClicked];
+    }
+    else if (indexPath.row == 4){
+        [self.sideNavigationDelegate calendarButtonClicked];
+    }
     else if (indexPath.row == 6){
         [self.sideNavigationDelegate signOutButtonClicked];
     }

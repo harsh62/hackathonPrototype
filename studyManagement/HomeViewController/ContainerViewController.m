@@ -154,4 +154,23 @@
     [self.mainHomeTabViewController setSelectedIndex:2];
 }
 
+- (void)profileButtonClicked{
+    [self moveViewToNormalPosition];
+    [self.mainHomeTabViewController setSelectedIndex:3];
+}
+
+- (void)calendarButtonClicked{
+    [self moveViewToNormalPosition];
+    
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"monthView"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)connectButtonClicked{
+    [self moveViewToNormalPosition];
+    
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"mpc"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 @end

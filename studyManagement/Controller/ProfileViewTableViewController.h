@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewTableViewController : UITableViewController
+@interface ProfileViewTableViewController : UITableViewController <UIImagePickerControllerDelegate, UITextFieldDelegate>
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
-@property (weak, nonatomic) IBOutlet UIImageView *bannerPicture;
+- (IBAction)profilePictureButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *blurImage;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @end

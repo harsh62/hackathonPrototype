@@ -17,6 +17,12 @@
 
 - (void)toDoClicked;
 
+- (void)profileButtonClicked;
+
+- (void)calendarButtonClicked;
+
+- (void)connectButtonClicked;
+
 @end
 
 @protocol modalControllerDelegate <NSObject>
