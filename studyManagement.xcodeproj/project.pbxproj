@@ -24,6 +24,19 @@
 		98F13ABD1AB3FE0700430BFB /* classesHomeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13ABC1AB3FE0700430BFB /* classesHomeCollectionViewController.m */; };
 		98F13AC01AB3FE5100430BFB /* classesHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13ABF1AB3FE5100430BFB /* classesHomeCollectionViewCell.m */; };
 		98F13AC21AB4093E00430BFB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F13AC11AB4093E00430BFB /* QuartzCore.framework */; };
+
+		CE4F8F221AB41AED00F5062D /* Collage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F211AB41AED00F5062D /* Collage.jpg */; };
+		CE4F8F281AB42F8D00F5062D /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4F8F271AB42F8D00F5062D /* Utility.m */; };
+		CE4F8F2E1AB4354E00F5062D /* transparentTeach.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F2D1AB4354E00F5062D /* transparentTeach.png */; };
+		CE4F8F371AB4397E00F5062D /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F301AB4397E00F5062D /* calendar.png */; };
+		CE4F8F381AB4397E00F5062D /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F311AB4397E00F5062D /* menu.png */; };
+		CE4F8F391AB4397E00F5062D /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F321AB4397E00F5062D /* profile.png */; };
+		CE4F8F3A1AB4397E00F5062D /* school.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F331AB4397E00F5062D /* school.png */; };
+		CE4F8F3C1AB4397E00F5062D /* students.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F351AB4397E00F5062D /* students.png */; };
+		CE4F8F3D1AB4397E00F5062D /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F361AB4397E00F5062D /* todo.png */; };
+		CE4F8F3F1AB439BE00F5062D /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F3E1AB439BE00F5062D /* logout.png */; };
+		CE4F8F411AB43BB900F5062D /* menuLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F8F401AB43BB900F5062D /* menuLogo.png */; };
+		CEE32EC81AB412FA0002AEAB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE32EC71AB412FA0002AEAB /* LoginViewController.m */; };
 		98F13AC51AB411C200430BFB /* standardClassesSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13AC41AB411C200430BFB /* standardClassesSelectionTableViewController.m */; };
 		98F13AC81AB413E800430BFB /* addClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13AC71AB413E800430BFB /* addClassViewController.m */; };
 		98F13ACC1AB417FB00430BFB /* ShowStudentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13ACB1AB417FB00430BFB /* ShowStudentTableViewController.m */; };
@@ -73,12 +86,31 @@
 		98F13ABE1AB3FE5100430BFB /* classesHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classesHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		98F13ABF1AB3FE5100430BFB /* classesHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classesHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		98F13AC11AB4093E00430BFB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+
+		CE4F8F211AB41AED00F5062D /* Collage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Collage.jpg; sourceTree = "<group>"; };
+		CE4F8F261AB42F8D00F5062D /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		CE4F8F271AB42F8D00F5062D /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		CE4F8F291AB4307000F5062D /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		CE4F8F2A1AB430BF00F5062D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CE4F8F2D1AB4354E00F5062D /* transparentTeach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentTeach.png; sourceTree = "<group>"; };
+		CE4F8F301AB4397E00F5062D /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		CE4F8F311AB4397E00F5062D /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		CE4F8F321AB4397E00F5062D /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		CE4F8F331AB4397E00F5062D /* school.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = school.png; sourceTree = "<group>"; };
+		CE4F8F351AB4397E00F5062D /* students.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = students.png; sourceTree = "<group>"; };
+		CE4F8F361AB4397E00F5062D /* todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todo.png; sourceTree = "<group>"; };
+		CE4F8F3E1AB439BE00F5062D /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		CE4F8F401AB43BB900F5062D /* menuLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuLogo.png; sourceTree = "<group>"; };
+		CEE32EC61AB412FA0002AEAB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CEE32EC71AB412FA0002AEAB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+
 		98F13AC31AB411C200430BFB /* standardClassesSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = standardClassesSelectionTableViewController.h; sourceTree = "<group>"; };
 		98F13AC41AB411C200430BFB /* standardClassesSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = standardClassesSelectionTableViewController.m; sourceTree = "<group>"; };
 		98F13AC61AB413E800430BFB /* addClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addClassViewController.h; sourceTree = "<group>"; };
 		98F13AC71AB413E800430BFB /* addClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addClassViewController.m; sourceTree = "<group>"; };
 		98F13ACA1AB417FB00430BFB /* ShowStudentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStudentTableViewController.h; sourceTree = "<group>"; };
 		98F13ACB1AB417FB00430BFB /* ShowStudentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStudentTableViewController.m; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +154,13 @@
 		98DCBAF01AB35D8A00AC5D8A /* studyManagement */ = {
 			isa = PBXGroup;
 			children = (
+
+				CE4F8F251AB42D5B00F5062D /* Utility */,
+				CE4F8F201AB41AED00F5062D /* Images */,
+				CEE32EC41AB4129E0002AEAB /* Controller */,
+
 				98F13AC91AB417A500430BFB /* StudentModule */,
+
 				98F13ABA1AB3FDE700430BFB /* ClassesModule */,
 				98F13A771AB3C7BD00430BFB /* BusinessLogic */,
 				98F13A751AB3C0F700430BFB /* Protocols */,
@@ -144,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				98DCBAF21AB35D8A00AC5D8A /* Info.plist */,
+				CE4F8F291AB4307000F5062D /* AppConstants.h */,
+				CE4F8F2A1AB430BF00F5062D /* PrefixHeader.pch */,
 				98DCBAF31AB35D8A00AC5D8A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -232,6 +272,59 @@
 			path = ClassesModule;
 			sourceTree = "<group>";
 		};
+
+		CE4F8F201AB41AED00F5062D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F8F2F1AB4397E00F5062D /* menuicons */,
+				CE4F8F2D1AB4354E00F5062D /* transparentTeach.png */,
+				CE4F8F211AB41AED00F5062D /* Collage.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CE4F8F251AB42D5B00F5062D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F8F261AB42F8D00F5062D /* Utility.h */,
+				CE4F8F271AB42F8D00F5062D /* Utility.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		CE4F8F2F1AB4397E00F5062D /* menuicons */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F8F401AB43BB900F5062D /* menuLogo.png */,
+				CE4F8F3E1AB439BE00F5062D /* logout.png */,
+				CE4F8F301AB4397E00F5062D /* calendar.png */,
+				CE4F8F311AB4397E00F5062D /* menu.png */,
+				CE4F8F321AB4397E00F5062D /* profile.png */,
+				CE4F8F331AB4397E00F5062D /* school.png */,
+				CE4F8F351AB4397E00F5062D /* students.png */,
+				CE4F8F361AB4397E00F5062D /* todo.png */,
+			);
+			path = menuicons;
+			sourceTree = "<group>";
+		};
+		CEE32EC41AB4129E0002AEAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEE32EC51AB4129E0002AEAB /* LoginViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEE32EC51AB4129E0002AEAB /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEE32EC61AB412FA0002AEAB /* LoginViewController.h */,
+				CEE32EC71AB412FA0002AEAB /* LoginViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+
 		98F13AC91AB417A500430BFB /* StudentModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +334,7 @@
 			path = StudentModule;
 			sourceTree = "<group>";
 		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +384,7 @@
 				TargetAttributes = {
 					98DCBAED1AB35D8A00AC5D8A = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = FW7F9SP7S7;
 					};
 					98DCBB091AB35D8B00AC5D8A = {
 						CreatedOnToolsVersion = 6.2;
@@ -322,8 +417,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				98DCBB001AB35D8A00AC5D8A /* Main.storyboard in Resources */,
+				CE4F8F371AB4397E00F5062D /* calendar.png in Resources */,
+				CE4F8F221AB41AED00F5062D /* Collage.jpg in Resources */,
+				CE4F8F2E1AB4354E00F5062D /* transparentTeach.png in Resources */,
+				CE4F8F3C1AB4397E00F5062D /* students.png in Resources */,
+				CE4F8F3D1AB4397E00F5062D /* todo.png in Resources */,
+				CE4F8F381AB4397E00F5062D /* menu.png in Resources */,
+				CE4F8F3A1AB4397E00F5062D /* school.png in Resources */,
 				98DCBB051AB35D8A00AC5D8A /* LaunchScreen.xib in Resources */,
 				98DCBB021AB35D8A00AC5D8A /* Images.xcassets in Resources */,
+				CE4F8F391AB4397E00F5062D /* profile.png in Resources */,
+				CE4F8F3F1AB439BE00F5062D /* logout.png in Resources */,
+				CE4F8F411AB43BB900F5062D /* menuLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +448,11 @@
 			files = (
 				98F13A7B1AB3C7DE00430BFB /* LogInSignUp.m in Sources */,
 				98DCBAF71AB35D8A00AC5D8A /* AppDelegate.m in Sources */,
+				CEE32EC81AB412FA0002AEAB /* LoginViewController.m in Sources */,
 				98F13A7F1AB3C83200430BFB /* WebServiceHit.m in Sources */,
+
+				CE4F8F281AB42F8D00F5062D /* Utility.m in Sources */,
+
 				98F13ACC1AB417FB00430BFB /* ShowStudentTableViewController.m in Sources */,
 				98F13A741AB3B8D900430BFB /* HomeTabViewController.m in Sources */,
 				98DCBAFA1AB35D8A00AC5D8A /* studyManagement.xcdatamodeld in Sources */,
@@ -477,9 +586,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = studyManagement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -487,9 +600,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = studyManagement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -22,6 +22,7 @@
     [self addMainHomeView];
     [self createSideNavButton];
     [self addSwipeGestures];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,8 +55,10 @@
 
 - (void)createSideNavButton{
     self.sideNavButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.sideNavButton setFrame:CGRectMake(0, 411, 40, 31)];
-    [self.sideNavButton setTitle:@"Side" forState:UIControlStateNormal];
+    [self.sideNavButton setFrame:CGRectMake(-5, 411, 20, 69)];
+    [self.sideNavButton setTintColor:[UIColor blackColor]];
+    [self.sideNavButton setImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
+    //[self.sideNavButton setTitle:@"Side" forState:UIControlStateNormal];
     [self.sideNavButton addTarget:self action:@selector(sideNavigationClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.sideNavButton setTag:100];
     [self.view addSubview:self.sideNavButton];
@@ -115,7 +118,7 @@
                         options:UIViewAnimationOptionTransitionNone
                      animations:^ {
                          [rightViewController.view setFrame:CGRectMake(0, 0, 200, [[UIScreen mainScreen] bounds].size.height) ];
-                         [self.sideNavButton setFrame:CGRectMake(200, self.sideNavButton.frame.origin.y, self.sideNavButton.frame.size.width, self.sideNavButton.frame.size.height)];
+                         [self.sideNavButton setFrame:CGRectMake(195, self.sideNavButton.frame.origin.y, self.sideNavButton.frame.size.width, self.sideNavButton.frame.size.height)];
                      }completion:^(BOOL finished) {
                          self.sideNavButton.tag = 101;
                      }];
@@ -129,7 +132,7 @@
                         options:UIViewAnimationOptionTransitionNone
                      animations:^ {
                          [rightViewController.view setFrame:CGRectMake(-200, 0, 200, [[UIScreen mainScreen] bounds].size.height) ];
-                         [self.sideNavButton setFrame:CGRectMake(0, self.sideNavButton.frame.origin.y, self.sideNavButton.frame.size.width, self.sideNavButton.frame.size.height)];
+                         [self.sideNavButton setFrame:CGRectMake(-5, self.sideNavButton.frame.origin.y, self.sideNavButton.frame.size.width, self.sideNavButton.frame.size.height)];
                      }completion:^(BOOL finished) {
                          self.sideNavButton.tag = 100;
                          [rightViewController.view setHidden:YES];

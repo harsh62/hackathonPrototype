@@ -36,7 +36,7 @@
                         @"Student 9",
                         @"Student 10",
                         nil];
-    selectedStudents = [[NSMutableArray alloc] init];
+    self.selectedStudents = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +62,7 @@
     
     [cell.textLabel setText:[self.allStudents objectAtIndex:indexPath.row]];
     // Configure the cell...
-    if([selectedStudents containsObject:[self.allStudents objectAtIndex:indexPath.row]]){
+    if([self.selectedStudents containsObject:[self.allStudents objectAtIndex:indexPath.row]]){
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
     }
     else{
@@ -73,11 +73,11 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if([selectedStudents containsObject:[self.allStudents objectAtIndex:indexPath.row]]){
-        [selectedStudents removeObject:[self.allStudents objectAtIndex:indexPath.row]];
+    if([self.selectedStudents containsObject:[self.allStudents objectAtIndex:indexPath.row]]){
+        [self.selectedStudents removeObject:[self.allStudents objectAtIndex:indexPath.row]];
     }
     else{
-        [selectedStudents addObject:[self.allStudents objectAtIndex:indexPath.row]];
+        [self.selectedStudents addObject:[self.allStudents objectAtIndex:indexPath.row]];
     }
     
     [self.studentTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
