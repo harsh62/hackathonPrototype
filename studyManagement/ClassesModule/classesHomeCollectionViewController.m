@@ -52,6 +52,9 @@ static NSString * const reuseIdentifier = @"customClassCell";
     
     classesHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     [cell.collectionCellLabel setText:[NSString stringWithFormat:@"%ld",indexPath.row + 1]];
+
+    [cell.collectionviewDetailCell setText:@"Detail"];
+    
     // Configure the cell
     
     cell.layer.borderColor = [UIColor lightGrayColor].CGColor;

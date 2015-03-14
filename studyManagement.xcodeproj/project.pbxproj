@@ -24,6 +24,9 @@
 		98F13ABD1AB3FE0700430BFB /* classesHomeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13ABC1AB3FE0700430BFB /* classesHomeCollectionViewController.m */; };
 		98F13AC01AB3FE5100430BFB /* classesHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13ABF1AB3FE5100430BFB /* classesHomeCollectionViewCell.m */; };
 		98F13AC21AB4093E00430BFB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F13AC11AB4093E00430BFB /* QuartzCore.framework */; };
+		98F13AC51AB411C200430BFB /* standardClassesSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13AC41AB411C200430BFB /* standardClassesSelectionTableViewController.m */; };
+		98F13AC81AB413E800430BFB /* addClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13AC71AB413E800430BFB /* addClassViewController.m */; };
+		98F13ACC1AB417FB00430BFB /* ShowStudentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13ACB1AB417FB00430BFB /* ShowStudentTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,12 @@
 		98F13ABE1AB3FE5100430BFB /* classesHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classesHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		98F13ABF1AB3FE5100430BFB /* classesHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classesHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		98F13AC11AB4093E00430BFB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		98F13AC31AB411C200430BFB /* standardClassesSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = standardClassesSelectionTableViewController.h; sourceTree = "<group>"; };
+		98F13AC41AB411C200430BFB /* standardClassesSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = standardClassesSelectionTableViewController.m; sourceTree = "<group>"; };
+		98F13AC61AB413E800430BFB /* addClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addClassViewController.h; sourceTree = "<group>"; };
+		98F13AC71AB413E800430BFB /* addClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addClassViewController.m; sourceTree = "<group>"; };
+		98F13ACA1AB417FB00430BFB /* ShowStudentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStudentTableViewController.h; sourceTree = "<group>"; };
+		98F13ACB1AB417FB00430BFB /* ShowStudentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStudentTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,7 @@
 		98DCBAF01AB35D8A00AC5D8A /* studyManagement */ = {
 			isa = PBXGroup;
 			children = (
+				98F13AC91AB417A500430BFB /* StudentModule */,
 				98F13ABA1AB3FDE700430BFB /* ClassesModule */,
 				98F13A771AB3C7BD00430BFB /* BusinessLogic */,
 				98F13A751AB3C0F700430BFB /* Protocols */,
@@ -214,8 +224,21 @@
 				98F13ABC1AB3FE0700430BFB /* classesHomeCollectionViewController.m */,
 				98F13ABE1AB3FE5100430BFB /* classesHomeCollectionViewCell.h */,
 				98F13ABF1AB3FE5100430BFB /* classesHomeCollectionViewCell.m */,
+				98F13AC31AB411C200430BFB /* standardClassesSelectionTableViewController.h */,
+				98F13AC41AB411C200430BFB /* standardClassesSelectionTableViewController.m */,
+				98F13AC61AB413E800430BFB /* addClassViewController.h */,
+				98F13AC71AB413E800430BFB /* addClassViewController.m */,
 			);
 			path = ClassesModule;
+			sourceTree = "<group>";
+		};
+		98F13AC91AB417A500430BFB /* StudentModule */ = {
+			isa = PBXGroup;
+			children = (
+				98F13ACA1AB417FB00430BFB /* ShowStudentTableViewController.h */,
+				98F13ACB1AB417FB00430BFB /* ShowStudentTableViewController.m */,
+			);
+			path = StudentModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,15 +344,18 @@
 				98F13A7B1AB3C7DE00430BFB /* LogInSignUp.m in Sources */,
 				98DCBAF71AB35D8A00AC5D8A /* AppDelegate.m in Sources */,
 				98F13A7F1AB3C83200430BFB /* WebServiceHit.m in Sources */,
+				98F13ACC1AB417FB00430BFB /* ShowStudentTableViewController.m in Sources */,
 				98F13A741AB3B8D900430BFB /* HomeTabViewController.m in Sources */,
 				98DCBAFA1AB35D8A00AC5D8A /* studyManagement.xcdatamodeld in Sources */,
 				98DCBAFD1AB35D8A00AC5D8A /* ViewController.m in Sources */,
 				98DCBAF41AB35D8A00AC5D8A /* main.m in Sources */,
 				98F13A6B1AB36CDE00430BFB /* ContainerViewController.m in Sources */,
 				98F13AC01AB3FE5100430BFB /* classesHomeCollectionViewCell.m in Sources */,
+				98F13AC51AB411C200430BFB /* standardClassesSelectionTableViewController.m in Sources */,
 				98F13ABD1AB3FE0700430BFB /* classesHomeCollectionViewController.m in Sources */,
 				98F13A6E1AB36CEF00430BFB /* HomeViewController.m in Sources */,
 				98F13A711AB36D0800430BFB /* SideViewController.m in Sources */,
+				98F13AC81AB413E800430BFB /* addClassViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,4 +15,11 @@
 
 @end
 
+@protocol modalControllerDelegate <NSObject>
+
+- (void)modalControllerDismissedWithValue:(NSString *)valueSelected;
+
+@end
+
+
 #endif
