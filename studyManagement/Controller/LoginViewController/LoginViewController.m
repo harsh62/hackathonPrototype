@@ -11,6 +11,7 @@
 #import "AppConstants.h"
 #import <QuartzCore/QuartzCore.h>
 #import "LogInSignUp.h"
+#import "CoreDataManager.h"
 
 @interface LoginViewController ()
 
@@ -199,6 +200,9 @@ CGRect rectTeachLogo;
 - (void) hitLoginWebService{
     LogInSignUp *loginControl = [[LogInSignUp alloc] init];
     if([loginControl tryToLogInWithUserName:self.textFieldUserName.text Password:self.textFieldPassword.text]){
+        [CoreDataManager saveUserwithUserName:self.textFieldUserName.text];
+        NSArray *allUsers = [CoreDataManager fetchUsers];
+        
         [self performSegueWithIdentifier:@"loginToContainer" sender:self];
     }
     else{

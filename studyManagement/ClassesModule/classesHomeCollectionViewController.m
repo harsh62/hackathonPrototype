@@ -114,7 +114,7 @@ static NSString * const reuseIdentifier = @"customClassCell";
         addClassViewController *addClassViewcontroller = [segue destinationViewController];
         addClassViewcontroller.pushNavigationDelegate = self;
     }
-    else if([segue.identifier isEqualToString:@"studentSegue"]){
+    else if([segue.identifier isEqualToString:@"showClassData"]){
 
     }
     else if([segue.identifier isEqualToString:@"teachersSegue"]){

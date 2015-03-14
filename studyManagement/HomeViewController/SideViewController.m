@@ -35,6 +35,9 @@
     else if (indexPath.row == 6){
         [self.sideNavigationDelegate signOutButtonClicked];
     }
+    else if (indexPath.row == 5){
+        [self.sideNavigationDelegate toDoClicked];
+    }
     
 }
 

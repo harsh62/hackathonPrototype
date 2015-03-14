@@ -149,5 +149,10 @@
 - (void)signOutButtonClicked{
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+- (void)toDoClicked{
+    [self moveViewToNormalPosition];
+    [self.mainHomeTabViewController setSelectedIndex:2];
+}
+
 
 @end
