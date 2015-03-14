@@ -8,6 +8,7 @@
 
 #import "SideViewController.h"
 
+
 @interface SideViewController ()
 
 @end
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.userName.text = [[iTeachSingleton sharedManager] userName];
 }
 
 - (void)viewGoingToAppear{
@@ -32,6 +35,9 @@
     if(indexPath.row == 3){
         [self.sideNavigationDelegate sideNavProfileSelected];
     }
+//    else if (indexPath.row == 6){
+//        [self.sideNavigationDelegate navigateToChatRoom];
+//    }
     else if (indexPath.row == 6){
         [self.sideNavigationDelegate signOutButtonClicked];
     }

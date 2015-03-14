@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 @property (weak, nonatomic) IBOutlet UIImageView *teachLogo;
 
+@property (strong, nonatomic) UIImageView *textfieldIcon;
 
 //Actions
 - (IBAction)signUp:(id)sender;

@@ -11,5 +11,6 @@
 
 @interface SideViewController : UITableViewController
 @property id <sideNavigationProtocol> sideNavigationDelegate;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
 - (void)viewGoingToAppear;
 @end

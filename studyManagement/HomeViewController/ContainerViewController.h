@@ -11,11 +11,14 @@
 #import "SideViewController.h"
 #import "NavProtocol.h"
 #import "HomeTabViewController.h"
+#import "LoginViewController.h"
 
 
 @interface ContainerViewController : UIViewController< sideNavigationProtocol>
 
 @property (strong, nonatomic) HomeTabViewController *mainHomeTabViewController;
 @property (strong, nonatomic) SideViewController *sideViewController;
+@property (strong, nonatomic) LoginViewController *loginViewController;
 @property (strong, nonatomic) UIButton *sideNavButton;
+
 @end

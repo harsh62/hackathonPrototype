@@ -16,6 +16,7 @@
 - (void)signOutButtonClicked;
 
 - (void)toDoClicked;
+
 @end
 
 @protocol modalControllerDelegate <NSObject>

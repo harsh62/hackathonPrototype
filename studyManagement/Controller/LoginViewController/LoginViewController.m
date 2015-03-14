@@ -42,7 +42,6 @@ CGRect rectTeachLogo;
     rectSignUpView = self.signUp.frame;
     rectTeachLogo = self.teachLogo.frame;
     
-    
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -104,43 +103,6 @@ CGRect rectTeachLogo;
 }
 */
 
-- (IBAction)signUp:(id)sender {
-    
-    
-    if(self.signUpButton.frame.origin.y != 100){
-        [UIView animateWithDuration:0.5
-                              delay:0.0
-                            options: UIViewAnimationOptionCurveEaseOut
-                         animations:^
-         {
-             self.signUpButton.frame = CGRectMake(10, 100 , 300, self.signUpButton.frame.size.height);
-             self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, 100 , self.loginButton.frame.size.width, self.loginButton.frame.size.height);
-             self.teachLogo.frame = CGRectMake(self.teachLogo.frame.origin.x, 20 , self.teachLogo.frame.size.width, self.teachLogo.frame.size.height);
-             [self.loginButton setAlpha:0.0];
-             
-             //Show sign up View
-             [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, 170, self.signUp.frame.size.width, self.signUp.frame.size.width)];
-             [self.signUp setAlpha:1.0];
-             
-         }
-                         completion:^(BOOL finished)
-         {
-             
-         }];
-    }
-    else{
-        
-        if([self validateTextSignUpFields]){
-            [self hitSignUpWebService];
-        }
-        else{
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter all the mandatory Fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
-            
-        }
-    }
-}
-
 -(BOOL)validateTextSignUpFields{
     
     if(self.textFieldSignUpUserName.text.length >0 &&self.textFieldSignUpPassword.text.length >0 &&self.textFieldGroupId.text.length >0 ){
@@ -178,6 +140,14 @@ CGRect rectTeachLogo;
              [self.loginView setFrame:CGRectMake(self.loginView.frame.origin.x, 170, self.loginView.frame.size.width, self.loginView.frame.size.width)];
              [self.loginView setAlpha:1.0];
              
+             self.textFieldUserName.leftViewMode = UITextFieldViewModeAlways;
+             [self addIconWithName:@"user91.png"];
+             self.textFieldUserName.leftView = self.textfieldIcon;
+             
+             self.textFieldPassword.leftViewMode = UITextFieldViewModeAlways;
+             [self addIconWithName:@"key63.png"];
+             self.textFieldPassword.leftView = self.textfieldIcon;
+             
          }
                          completion:^(BOOL finished)
          {
@@ -197,13 +167,67 @@ CGRect rectTeachLogo;
     }
 }
 
+- (IBAction)signUp:(id)sender {
+    
+    
+    if(self.signUpButton.frame.origin.y != 100){
+        [UIView animateWithDuration:0.5
+                              delay:0.0
+                            options: UIViewAnimationOptionCurveEaseOut
+                         animations:^
+         {
+             self.signUpButton.frame = CGRectMake(10, 100 , 300, self.signUpButton.frame.size.height);
+             self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, 100 , self.loginButton.frame.size.width, self.loginButton.frame.size.height);
+             self.teachLogo.frame = CGRectMake(self.teachLogo.frame.origin.x, 20 , self.teachLogo.frame.size.width, self.teachLogo.frame.size.height);
+             [self.loginButton setAlpha:0.0];
+             
+             //Show sign up View
+             [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, 170, self.signUp.frame.size.width, self.signUp.frame.size.width)];
+             [self.signUp setAlpha:1.0];
+             
+             self.textFieldSignUpUserName.leftViewMode = UITextFieldViewModeAlways;
+             [self addIconWithName:@"user91.png"];
+             self.textFieldSignUpUserName.leftView = self.textfieldIcon;
+             
+             self.textFieldSignUpPassword.leftViewMode = UITextFieldViewModeAlways;
+             [self addIconWithName:@"key63.png"];
+             self.textFieldSignUpPassword.leftView = self.textfieldIcon;
+             
+             self.textFieldGroupId.leftViewMode = UITextFieldViewModeAlways;
+             [self addIconWithName:@"multiple25.png"];
+             self.textFieldGroupId.leftView = self.textfieldIcon;
+             
+         }
+                         completion:^(BOOL finished)
+         {
+             
+         }];
+    }
+    else{
+        
+        if([self validateTextSignUpFields]){
+            [self hitSignUpWebService];
+        }
+        else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter all the mandatory Fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+            
+        }
+    }
+}
+
+-(void)addIconWithName:(NSString*)imageName {
+    self.textfieldIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+    self.textfieldIcon.frame = CGRectMake(10.0, 0.0, self.textfieldIcon.image.size.width+10.0, self.textfieldIcon.image.size.height);
+    self.textfieldIcon.contentMode = UIViewContentModeCenter;
+}
+
+
 - (void) hitLoginWebService{
     LogInSignUp *loginControl = [[LogInSignUp alloc] init];
     if([loginControl tryToLogInWithUserName:self.textFieldUserName.text Password:self.textFieldPassword.text]){
-        [CoreDataManager saveUserwithUserName:self.textFieldUserName.text];
-        NSArray *allUsers = [CoreDataManager fetchUsers];
-        
-        [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+
+        [self loginOrSignupSuccessfulForUser:self.textFieldUserName.text];
     }
     else{
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid Credentials" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -214,12 +238,18 @@ CGRect rectTeachLogo;
 -(void)hitSignUpWebService{
     LogInSignUp *loginControl = [[LogInSignUp alloc] init];
     if([loginControl tryToSignUpWithUserName:self.textFieldSignUpUserName.text Password:self.textFieldSignUpPassword.text andGroupId:self.textFieldGroupId.text]){
-        [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+        [self loginOrSignupSuccessfulForUser:self.textFieldSignUpUserName.text];
     }
     else{
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Sign up failed due to an unexpected error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertView show];
     }
 }
+
+-(void)loginOrSignupSuccessfulForUser:(NSString*)userName {
+    [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+    [[iTeachSingleton sharedManager] setUserName:userName];
+}
+
 @end
 
