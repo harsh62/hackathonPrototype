@@ -10,6 +10,7 @@
 #import "Utility.h"
 #import "AppConstants.h"
 #import <QuartzCore/QuartzCore.h>
+#import "LogInSignUp.h"
 
 @interface LoginViewController ()
 
@@ -21,6 +22,7 @@ CGRect rectLoginButton;
 CGRect rectSignUpButton;
 CGRect rectLoginView;
 CGRect rectSignUpView;
+CGRect rectTeachLogo;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,6 +39,7 @@ CGRect rectSignUpView;
     rectSignUpButton = self.signUpButton.frame;
     rectLoginView = self.loginView.frame;
     rectSignUpView = self.signUp.frame;
+    rectTeachLogo = self.teachLogo.frame;
     
     
 }
@@ -46,6 +49,8 @@ CGRect rectSignUpView;
      self.signUpButton.frame =rectSignUpButton;
      self.loginView.frame =rectLoginView;
      self.signUp.frame =rectSignUpView;
+    self.teachLogo.frame = rectTeachLogo;
+    
     [self.signUp setAlpha:0];
     [self.loginView setAlpha:0];
     
@@ -104,7 +109,7 @@ CGRect rectSignUpView;
     if(self.signUpButton.frame.origin.y != 100){
         [UIView animateWithDuration:0.5
                               delay:0.0
-                            options: UIViewAnimationOptionCurveLinear
+                            options: UIViewAnimationOptionCurveEaseOut
                          animations:^
          {
              self.signUpButton.frame = CGRectMake(10, 100 , 300, self.signUpButton.frame.size.height);
@@ -125,7 +130,7 @@ CGRect rectSignUpView;
     else{
         
         if([self validateTextSignUpFields]){
-            [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+            [self hitSignUpWebService];
         }
         else{
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter all the mandatory Fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -158,9 +163,9 @@ CGRect rectSignUpView;
 - (IBAction)loginButton:(id)sender {
     
     if(self.loginButton.frame.origin.y != 100){
-        [UIView animateWithDuration:0.5
+        [UIView animateWithDuration:0.4
                               delay:0.0
-                            options: UIViewAnimationOptionCurveLinear
+                            options: UIViewAnimationOptionCurveEaseOut
                          animations:^
          {
              self.signUpButton.frame = CGRectMake(self.signUpButton.frame.origin.x, 100 , self.signUpButton.frame.size.width, self.signUpButton.frame.size.height);
@@ -169,7 +174,7 @@ CGRect rectSignUpView;
              [self.signUpButton setAlpha:0.0];
              
              //Show sign up View
-             [self.loginView setFrame:CGRectMake(self.loginView.frame.origin.x, 200, self.loginView.frame.size.width, self.loginView.frame.size.width)];
+             [self.loginView setFrame:CGRectMake(self.loginView.frame.origin.x, 170, self.loginView.frame.size.width, self.loginView.frame.size.width)];
              [self.loginView setAlpha:1.0];
              
          }
@@ -181,7 +186,7 @@ CGRect rectSignUpView;
     else{
         
         if([self validateTextLoginFields]){
-            [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+            [self hitLoginWebService];
         }
         else{
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter all the mandatory Fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -190,4 +195,27 @@ CGRect rectSignUpView;
         }
     }
 }
+
+- (void) hitLoginWebService{
+    LogInSignUp *loginControl = [[LogInSignUp alloc] init];
+    if([loginControl tryToLogInWithUserName:self.textFieldUserName.text Password:self.textFieldPassword.text]){
+        [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid Credentials" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+
+-(void)hitSignUpWebService{
+    LogInSignUp *loginControl = [[LogInSignUp alloc] init];
+    if([loginControl tryToSignUpWithUserName:self.textFieldSignUpUserName.text Password:self.textFieldSignUpPassword.text andGroupId:self.textFieldGroupId.text]){
+        [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Sign up failed due to an unexpected error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
 @end
+

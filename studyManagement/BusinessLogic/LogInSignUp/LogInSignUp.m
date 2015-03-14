@@ -11,7 +11,7 @@
 
 @implementation LogInSignUp
 
-- (void)tryToSignUpWithUserName:(NSString *)userName Password:(NSString *)password andGroupId:(NSString *)groupId{
+- (BOOL)tryToSignUpWithUserName:(NSString *)userName Password:(NSString *)password andGroupId:(NSString *)groupId{
 
     NSMutableDictionary *dictionnary = [NSMutableDictionary dictionary];
     [dictionnary setObject:userName forKey:@"volunteerId"];
@@ -23,7 +23,7 @@
                                                        options:kNilOptions
                                                          error:&error];
     
-    NSString *urlString = @"http://localhost:8080/ListrWS.asmx/LogIn";
+    NSString *urlString = @"http://infywired.esy.es/StudyManagement/Services/SignUp/signUp.php";
     NSURL *url = [NSURL URLWithString:urlString];
     
     // Prepare the request
@@ -35,12 +35,19 @@
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]]  forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:jsonData];
     
-    [WebServiceHit hitTheServerWithURLRequest:request];
+    NSArray *array = [WebServiceHit hitTheServerWithURLRequest:request];
+    NSDictionary *dict = [array objectAtIndex:0];
+    if([[dict valueForKey:@"result"] isEqualToString:@"Success"]){
+        return YES;
+    }
+    else{
+        return NO;
+    }
     
 }
 
 
-- (void)tryToLogInWithUserName:(NSString *)userName Password:(NSString *)password{
+- (BOOL)tryToLogInWithUserName:(NSString *)userName Password:(NSString *)password{
     
     NSMutableDictionary *dictionnary = [NSMutableDictionary dictionary];
     [dictionnary setObject:userName forKey:@"userId"];
@@ -51,9 +58,11 @@
                                                        options:kNilOptions
                                                          error:&error];
     
-    NSString *urlString = @"http://localhost:8080/ListrWS.asmx/LogIn";
+    NSString *urlString = @"http://infywired.esy.es/StudyManagement/Services/Login/login.php";
     NSURL *url = [NSURL URLWithString:urlString];
     
+/*
+  */
     // Prepare the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
@@ -63,7 +72,16 @@
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]]  forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:jsonData];
     
-    [WebServiceHit hitTheServerWithURLRequest:request];
+    
+    
+    NSArray *array = [WebServiceHit hitTheServerWithURLRequest:request];
+    NSDictionary *dict = [array objectAtIndex:0];
+    if([[dict valueForKey:@"result"] isEqualToString:@"Success"]){
+        return YES;
+    }
+    else{
+        return NO;
+    }
     
 }
 

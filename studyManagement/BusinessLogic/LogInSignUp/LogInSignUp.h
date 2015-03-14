@@ -10,4 +10,9 @@
 #import "ServerResponseProtocol.h"
 @interface LogInSignUp : NSObject<logInSignUpProtocol>
 
+
+- (BOOL)tryToLogInWithUserName:(NSString *)userName Password:(NSString *)password;
+- (BOOL)tryToSignUpWithUserName:(NSString *)userName Password:(NSString *)password andGroupId:(NSString *)groupId;
+
+
 @end

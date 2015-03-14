@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface WebServiceHit : NSObject
-+ (NSData *)hitTheServerWithURLRequest:(NSURLRequest *)urlRequest;
++ (NSArray *)hitTheServerWithURLRequest:(NSURLRequest *)urlRequest;
 @end
