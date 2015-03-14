@@ -23,5 +23,8 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UIButton *showStandardDataSelected;
 @property (strong, nonatomic) NSArray *selectedStudents;
 @property (strong, nonatomic) NSArray *selectedTeachers;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfStudents;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfTeachers;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfSubjects;
 @property (strong, nonatomic) NSArray *selectedSubjects;
 @end

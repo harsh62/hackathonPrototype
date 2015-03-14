@@ -36,7 +36,6 @@
                         @"Student 9",
                         @"Student 10",
                         nil];
-    self.selectedStudents = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -127,6 +126,7 @@
 }
 */
 - (IBAction)domeButtonSelected:(id)sender {
+    [self.modalNavigationDelegate modalControllerDismissedWithValue:self.selectedStudents];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

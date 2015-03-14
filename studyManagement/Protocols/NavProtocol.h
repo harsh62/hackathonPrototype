@@ -19,7 +19,7 @@
 
 @protocol modalControllerDelegate <NSObject>
 
-- (void)modalControllerDismissedWithValue:(NSString *)valueSelected;
+- (void)modalControllerDismissedWithValue:(NSArray *)valueSelected;
 
 @end
 

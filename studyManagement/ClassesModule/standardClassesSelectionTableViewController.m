@@ -31,7 +31,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.modalNavigationDelegate modalControllerDismissedWithValue:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    [self.modalNavigationDelegate modalControllerDismissedWithValue:[NSArray arrayWithObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
 
     [self dismissViewControllerAnimated:YES completion:nil];
 }

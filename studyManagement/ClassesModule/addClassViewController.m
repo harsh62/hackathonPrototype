@@ -9,6 +9,8 @@
 #import "addClassViewController.h"
 #import "standardClassesSelectionTableViewController.h"
 #import "ShowStudentTableViewController.h"
+#import "ShowSubjectsTableViewController.h"
+#import "ShowTeacherTableViewController.h"
 
 @interface addClassViewController ()
 
@@ -29,6 +31,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    self.numberOfStudents.text = [NSString stringWithFormat:@"Number Of Students: %lu",(unsigned long)[self.selectedStudents count]];
+    self.numberOfTeachers.text = [NSString stringWithFormat:@"Number Of Teachers: %lu",(unsigned long)[self.selectedTeachers count]];
+    self.numberOfSubjects.text = [NSString stringWithFormat:@"Number Of Subjects: %lu",(unsigned long)[self.selectedSubjects count]];
+}
 
 #pragma mark - Navigation
 
@@ -45,16 +52,19 @@
     else if([segue.identifier isEqualToString:@"studentSegue"]){
         ShowStudentTableViewController *showStudentViewcontroller = [segue destinationViewController];
         showStudentViewcontroller.modalNavigationDelegate = self;
+        showStudentViewcontroller.selectedStudents = self.selectedStudents;
         selectedButton = StudentSelected;
     }
-    else if([segue.identifier isEqualToString:@"TeacherSelected"]){
-        ShowStudentTableViewController *showStudentViewcontroller = [segue destinationViewController];
+    else if([segue.identifier isEqualToString:@"teachersSegue"]){
+        ShowTeacherTableViewController *showStudentViewcontroller = [segue destinationViewController];
         showStudentViewcontroller.modalNavigationDelegate = self;
+        showStudentViewcontroller.selectedTeachers = self.selectedTeachers;
         selectedButton = TeacherSelected;
     }
-    else if([segue.identifier isEqualToString:@"SubjectSelected"]){
-        ShowStudentTableViewController *showStudentViewcontroller = [segue destinationViewController];
+    else if([segue.identifier isEqualToString:@"subjectsSegue"]){
+        ShowSubjectsTableViewController *showStudentViewcontroller = [segue destinationViewController];
         showStudentViewcontroller.modalNavigationDelegate = self;
+        showStudentViewcontroller.selectedSubjects = self.selectedSubjects;
         selectedButton = SubjectSelected;
     }
 
@@ -86,5 +96,10 @@
             break;
     }
 }
+
+- (void)validateFields{
+    
+}
+
 
 @end
