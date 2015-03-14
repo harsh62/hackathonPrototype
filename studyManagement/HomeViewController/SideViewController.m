@@ -32,6 +32,10 @@
     if(indexPath.row == 3){
         [self.sideNavigationDelegate sideNavProfileSelected];
     }
+    else if (indexPath.row == 6){
+        [self.sideNavigationDelegate signOutButtonClicked];
+    }
+    
 }
 
 @end

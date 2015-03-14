@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XTW-oC-SNV">
-                                        <rect key="frame" x="170" y="369" width="140" height="50"/>
+                                        <rect key="frame" x="170" y="370" width="140" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kQA-nI-15j">
-                                        <rect key="frame" x="10" y="369" width="140" height="50"/>
+                                        <rect key="frame" x="10" y="370" width="140" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Log In">
@@ -50,13 +50,12 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="dco-DY-N0R" eventType="touchUpInside" id="SI0-CS-hJG"/>
-                                            <segue destination="YRB-yu-wTt" kind="push" id="jee-6v-fQ5"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" id="EOb-vy-26I" userLabel="Sign Up">
+                            <view alpha="0.0" contentMode="scaleToFill" id="EOb-vy-26I" userLabel="Sign Up">
                                 <rect key="frame" x="0.0" y="118" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -84,7 +83,7 @@
                                         <rect key="frame" x="193" y="49" width="119" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cZj-vN-WZv">
                                         <rect key="frame" x="20" y="96" width="70" height="21"/>
@@ -100,9 +99,9 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" id="z3V-CM-6a6" userLabel="Log In">
+                            <view alpha="0.0" contentMode="scaleToFill" id="z3V-CM-6a6" userLabel="Log In">
                                 <rect key="frame" x="0.0" y="118" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -130,10 +129,10 @@
                                         <rect key="frame" x="193" y="49" width="119" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,11 +146,18 @@
                         <outlet property="loginView" destination="z3V-CM-6a6" id="VDx-EX-IhD"/>
                         <outlet property="signUp" destination="EOb-vy-26I" id="ce2-hd-fkA"/>
                         <outlet property="signUpButton" destination="XTW-oC-SNV" id="rul-zI-x5X"/>
+                        <outlet property="teachLogo" destination="4Lb-hH-Hj8" id="Vqj-rl-Ujd"/>
+                        <outlet property="textFieldGroupId" destination="AvB-me-oW5" id="9Yy-5o-mh5"/>
+                        <outlet property="textFieldPassword" destination="A9l-qm-1a0" id="olH-ai-LSF"/>
+                        <outlet property="textFieldSignUpPassword" destination="RI5-DS-R34" id="PED-D6-VKx"/>
+                        <outlet property="textFieldSignUpUserName" destination="JFt-PX-rd7" id="WNg-NK-yAi"/>
+                        <outlet property="textFieldUserName" destination="0HT-ce-icm" id="iQH-D6-wi7"/>
+                        <segue destination="YRB-yu-wTt" kind="push" identifier="loginToContainer" id="DTr-vP-q6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2F-qP-Hpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1101" y="-503"/>
+            <point key="canvasLocation" x="-1211" y="-449"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="xMS-dC-aBq">
@@ -175,7 +181,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9JA-rq-c74">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="ZAI-eV-8lb">
                                 <cells>
@@ -190,7 +196,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="60" id="tRr-U2-tfn">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -217,7 +223,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="60" id="fnN-y0-bz1">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -244,7 +250,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="60" id="bF4-t8-1cJ">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -271,7 +277,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="60" id="Ea0-Gj-ZqR">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -298,7 +304,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="60" id="LhU-T3-3Rb">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -325,7 +331,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="60" id="cGF-tb-h8M">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -352,7 +358,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82655679744525545" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91004219890510951" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1116,7 +1122,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3R-Qz-dBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1617" y="-415"/>
+            <point key="canvasLocation" x="-1797" y="-437"/>
         </scene>
         <!--Item-->
         <scene sceneID="L2N-ov-E6q">

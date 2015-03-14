@@ -23,6 +23,14 @@
     
     [self designButtons];
     
+    
+    [self.loginView setFrame:CGRectMake(self.loginView.frame.origin.x, self.view.frame.size.height, self.loginView.frame.size.width, self.loginView.frame.size.width)];
+    [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, self.view.frame.size.height, self.signUp.frame.size.width, self.signUp.frame.size.width)];
+    
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    
 }
 
 - (void) designButtons{
@@ -63,28 +71,93 @@
 - (IBAction)signUp:(id)sender {
     
     
-    
-    [UIView animateWithDuration:0.2
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveLinear
-                     animations:^
-     {
-        self.signUpButton.frame = CGRectMake(self.signUpButton.frame.origin.x, self.signUpButton.frame.origin.y - 200, self.signUpButton.frame.size.width, self.signUpButton.frame.size.height);
-        self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, self.loginButton.frame.origin.y - 200, self.loginButton.frame.size.width, self.loginButton.frame.size.height);
-
+    if(self.signUpButton.frame.origin.y != 100){
+        [UIView animateWithDuration:0.5
+                              delay:0.0
+                            options: UIViewAnimationOptionCurveLinear
+                         animations:^
+         {
+             self.signUpButton.frame = CGRectMake(self.signUpButton.frame.origin.x, 100 , self.signUpButton.frame.size.width, self.signUpButton.frame.size.height);
+             self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, 100 , self.loginButton.frame.size.width, self.loginButton.frame.size.height);
+             self.teachLogo.frame = CGRectMake(self.teachLogo.frame.origin.x, 20 , self.teachLogo.frame.size.width, self.teachLogo.frame.size.height);
+             [self.loginButton setAlpha:0.0];
+             
+             //Show sign up View
+             [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, 200, self.signUp.frame.size.width, self.signUp.frame.size.width)];
+             [self.signUp setAlpha:1.0];
+             
+         }
+                         completion:^(BOOL finished)
+         {
+             
+         }];
     }
-                     completion:^(BOOL finished)
-     {
-         [self.loginButton setHidden:YES];
+    else{
+        
+        if([self validateTextSignUpFields]){
+            [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+        }
+        else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter all the mandatory Fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+            
+        }
+    }
+}
 
-         NSLog(@"Completed");
-         
-     }];
+-(BOOL)validateTextSignUpFields{
     
+    if(self.textFieldSignUpUserName.text.length >0 &&self.textFieldSignUpPassword.text.length >0 &&self.textFieldGroupId.text.length >0 ){
+        return YES;
+    }
+    else{
+        return NO;
+    }
+}
+
+-(BOOL)validateTextLoginFields{
     
-    
+    if(self.textFieldUserName.text.length >0 &&self.textFieldPassword.text.length >0){
+        return YES;
+    }
+    else{
+        return NO;
+    }
 }
 
 - (IBAction)loginButton:(id)sender {
+    
+    if(self.loginButton.frame.origin.y != 100){
+        [UIView animateWithDuration:0.5
+                              delay:0.0
+                            options: UIViewAnimationOptionCurveLinear
+                         animations:^
+         {
+             self.signUpButton.frame = CGRectMake(self.signUpButton.frame.origin.x, 100 , self.signUpButton.frame.size.width, self.signUpButton.frame.size.height);
+             self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, 100 , self.loginButton.frame.size.width, self.loginButton.frame.size.height);
+             self.teachLogo.frame = CGRectMake(self.teachLogo.frame.origin.x, 20 , self.teachLogo.frame.size.width, self.teachLogo.frame.size.height);
+             [self.signUpButton setAlpha:0.0];
+             
+             //Show sign up View
+             [self.loginView setFrame:CGRectMake(self.loginView.frame.origin.x, 200, self.loginView.frame.size.width, self.loginView.frame.size.width)];
+             [self.loginView setAlpha:1.0];
+             
+         }
+                         completion:^(BOOL finished)
+         {
+             
+         }];
+    }
+    else{
+        
+        if([self validateTextLoginFields]){
+            [self performSegueWithIdentifier:@"loginToContainer" sender:self];
+        }
+        else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter all the mandatory Fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+            
+        }
+    }
 }
 @end

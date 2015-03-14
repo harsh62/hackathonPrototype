@@ -21,10 +21,21 @@
 //Buttons
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet UIImageView *teachLogo;
 
 
 //Actions
 - (IBAction)signUp:(id)sender;
 - (IBAction)loginButton:(id)sender;
+
+
+//textFields
+@property (weak, nonatomic) IBOutlet UITextField *textFieldUserName;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldGroupId;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSignUpUserName;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSignUpPassword;
+
+
 
 @end

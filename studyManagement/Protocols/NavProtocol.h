@@ -13,6 +13,8 @@
 
 - (void)sideNavProfileSelected;
 
+- (void)signOutButtonClicked;
+
 @end
 
 @protocol modalControllerDelegate <NSObject>

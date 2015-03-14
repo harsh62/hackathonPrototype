@@ -146,4 +146,8 @@
     [self.mainHomeTabViewController setSelectedIndex:1];
 }
 
+- (void)signOutButtonClicked{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 @end
