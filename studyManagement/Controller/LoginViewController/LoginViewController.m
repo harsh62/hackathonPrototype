@@ -17,6 +17,11 @@
 
 @implementation LoginViewController
 
+CGRect rectLoginButton;
+CGRect rectSignUpButton;
+CGRect rectLoginView;
+CGRect rectSignUpView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,10 +32,35 @@
     [self.loginView setFrame:CGRectMake(self.loginView.frame.origin.x, self.view.frame.size.height, self.loginView.frame.size.width, self.loginView.frame.size.width)];
     [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, self.view.frame.size.height, self.signUp.frame.size.width, self.signUp.frame.size.width)];
     
+    
+    rectLoginButton = self.loginButton.frame;
+    rectSignUpButton = self.signUpButton.frame;
+    rectLoginView = self.loginView.frame;
+    rectSignUpView = self.signUp.frame;
+    
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated{
+    self.loginButton.frame=rectLoginButton;
+     self.signUpButton.frame =rectSignUpButton;
+     self.loginView.frame =rectLoginView;
+     self.signUp.frame =rectSignUpView;
+    [self.signUp setAlpha:0];
+    [self.loginView setAlpha:0];
     
+    [self.loginButton setAlpha:1.0];
+    [self.signUpButton setAlpha:1.0];
+
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.textFieldPassword resignFirstResponder];
+    [self.textFieldSignUpPassword resignFirstResponder];
+    [self.textFieldSignUpUserName resignFirstResponder];
+    [self.textFieldUserName resignFirstResponder];
+    [self.textFieldGroupId resignFirstResponder];
+
 }
 
 - (void) designButtons{
@@ -77,13 +107,13 @@
                             options: UIViewAnimationOptionCurveLinear
                          animations:^
          {
-             self.signUpButton.frame = CGRectMake(self.signUpButton.frame.origin.x, 100 , self.signUpButton.frame.size.width, self.signUpButton.frame.size.height);
+             self.signUpButton.frame = CGRectMake(10, 100 , 300, self.signUpButton.frame.size.height);
              self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, 100 , self.loginButton.frame.size.width, self.loginButton.frame.size.height);
              self.teachLogo.frame = CGRectMake(self.teachLogo.frame.origin.x, 20 , self.teachLogo.frame.size.width, self.teachLogo.frame.size.height);
              [self.loginButton setAlpha:0.0];
              
              //Show sign up View
-             [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, 200, self.signUp.frame.size.width, self.signUp.frame.size.width)];
+             [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, 170, self.signUp.frame.size.width, self.signUp.frame.size.width)];
              [self.signUp setAlpha:1.0];
              
          }
@@ -134,7 +164,7 @@
                          animations:^
          {
              self.signUpButton.frame = CGRectMake(self.signUpButton.frame.origin.x, 100 , self.signUpButton.frame.size.width, self.signUpButton.frame.size.height);
-             self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, 100 , self.loginButton.frame.size.width, self.loginButton.frame.size.height);
+             self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x, 100 , 300, self.loginButton.frame.size.height);
              self.teachLogo.frame = CGRectMake(self.teachLogo.frame.origin.x, 20 , self.teachLogo.frame.size.width, self.teachLogo.frame.size.height);
              [self.signUpButton setAlpha:0.0];
              
