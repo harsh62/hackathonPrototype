@@ -33,6 +33,10 @@
 		98F13B571AB4C75D00430BFB /* RWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13B521AB4C75D00430BFB /* RWTableViewController.m */; };
 		98F13B581AB4C75D00430BFB /* UIAlertView+RWBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13B541AB4C75D00430BFB /* UIAlertView+RWBlock.m */; };
 		98F13B591AB4C75D00430BFB /* UIButton+RWBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F13B561AB4C75D00430BFB /* UIButton+RWBlock.m */; };
+		98F13B5E1AB4CFCC00430BFB /* checkmarkOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13B5A1AB4CFCC00430BFB /* checkmarkOff.png */; };
+		98F13B5F1AB4CFCC00430BFB /* checkmarkOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13B5B1AB4CFCC00430BFB /* checkmarkOff@2x.png */; };
+		98F13B601AB4CFCC00430BFB /* checkmarkOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13B5C1AB4CFCC00430BFB /* checkmarkOn.png */; };
+		98F13B611AB4CFCC00430BFB /* checkmarkOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13B5D1AB4CFCC00430BFB /* checkmarkOn@2x.png */; };
 		CE13988B1AB464BA001D2E66 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE13988A1AB464BA001D2E66 /* background.jpg */; };
 		CE13988F1AB466B1001D2E66 /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE13988E1AB466B1001D2E66 /* UpdateProfileViewController.m */; };
 		CE1398931AB467F0001D2E66 /* iTeachSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1398921AB467F0001D2E66 /* iTeachSingleton.m */; };
@@ -122,6 +126,10 @@
 		98F13B541AB4C75D00430BFB /* UIAlertView+RWBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+RWBlock.m"; sourceTree = "<group>"; };
 		98F13B551AB4C75D00430BFB /* UIButton+RWBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RWBlock.h"; sourceTree = "<group>"; };
 		98F13B561AB4C75D00430BFB /* UIButton+RWBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RWBlock.m"; sourceTree = "<group>"; };
+		98F13B5A1AB4CFCC00430BFB /* checkmarkOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmarkOff.png; sourceTree = "<group>"; };
+		98F13B5B1AB4CFCC00430BFB /* checkmarkOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmarkOff@2x.png"; sourceTree = "<group>"; };
+		98F13B5C1AB4CFCC00430BFB /* checkmarkOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmarkOn.png; sourceTree = "<group>"; };
+		98F13B5D1AB4CFCC00430BFB /* checkmarkOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmarkOn@2x.png"; sourceTree = "<group>"; };
 		CE13988A1AB464BA001D2E66 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		CE13988D1AB466B1001D2E66 /* UpdateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfileViewController.h; sourceTree = "<group>"; };
 		CE13988E1AB466B1001D2E66 /* UpdateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
@@ -460,6 +468,10 @@
 		CE4F8F201AB41AED00F5062D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				98F13B5A1AB4CFCC00430BFB /* checkmarkOff.png */,
+				98F13B5B1AB4CFCC00430BFB /* checkmarkOff@2x.png */,
+				98F13B5C1AB4CFCC00430BFB /* checkmarkOn.png */,
+				98F13B5D1AB4CFCC00430BFB /* checkmarkOn@2x.png */,
 				CE13988A1AB464BA001D2E66 /* background.jpg */,
 				CE13989B1AB4B4F8001D2E66 /* loginIcons */,
 				CE4F8F2F1AB4397E00F5062D /* menuicons */,
@@ -596,6 +608,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98DCBB001AB35D8A00AC5D8A /* Main.storyboard in Resources */,
+				98F13B611AB4CFCC00430BFB /* checkmarkOn@2x.png in Resources */,
+				98F13B5E1AB4CFCC00430BFB /* checkmarkOff.png in Resources */,
 				CE4F8F371AB4397E00F5062D /* calendar.png in Resources */,
 				CE4F8F221AB41AED00F5062D /* Collage.jpg in Resources */,
 				CE4F8F2E1AB4354E00F5062D /* transparentTeach.png in Resources */,
@@ -609,6 +623,8 @@
 				CE13988B1AB464BA001D2E66 /* background.jpg in Resources */,
 				98DCBB021AB35D8A00AC5D8A /* Images.xcassets in Resources */,
 				CE4F8F391AB4397E00F5062D /* profile.png in Resources */,
+				98F13B5F1AB4CFCC00430BFB /* checkmarkOff@2x.png in Resources */,
+				98F13B601AB4CFCC00430BFB /* checkmarkOn.png in Resources */,
 				CE4F8F3F1AB439BE00F5062D /* logout.png in Resources */,
 				CE13989E1AB4B5D6001D2E66 /* key63.png in Resources */,
 				CE4F8F411AB43BB900F5062D /* menuLogo.png in Resources */,
