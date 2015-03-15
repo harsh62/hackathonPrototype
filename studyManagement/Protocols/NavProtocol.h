@@ -11,6 +11,8 @@
 
 @protocol sideNavigationProtocol <NSObject>
 
+- (void)homeButtonClicked;
+
 - (void)sideNavProfileSelected;
 
 - (void)signOutButtonClicked;

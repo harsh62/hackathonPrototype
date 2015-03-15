@@ -141,6 +141,11 @@
 
 
 #pragma mark SideNavigation
+- (void)homeButtonClicked{
+    [self moveViewToNormalPosition];
+    [self.mainHomeTabViewController setSelectedIndex:0];
+}
+
 - (void)sideNavProfileSelected{
     [self moveViewToNormalPosition];
     [self.mainHomeTabViewController setSelectedIndex:1];

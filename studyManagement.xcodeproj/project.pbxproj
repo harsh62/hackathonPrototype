@@ -67,6 +67,7 @@
 		98F13BB51AB5117A00430BFB /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BB01AB5117A00430BFB /* todo.png */; };
 		98F13BB61AB5117A00430BFB /* peer.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BB11AB5117A00430BFB /* peer.png */; };
 		98F13BB71AB5117A00430BFB /* total.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BB21AB5117A00430BFB /* total.png */; };
+		98F13BB91AB5141900430BFB /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BB81AB5141900430BFB /* home.png */; };
 		CE13988B1AB464BA001D2E66 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE13988A1AB464BA001D2E66 /* background.jpg */; };
 		CE1398931AB467F0001D2E66 /* iTeachSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1398921AB467F0001D2E66 /* iTeachSingleton.m */; };
 		CE13989E1AB4B5D6001D2E66 /* key63.png in Resources */ = {isa = PBXBuildFile; fileRef = CE13989C1AB4B5D6001D2E66 /* key63.png */; };
@@ -213,6 +214,7 @@
 		98F13BB01AB5117A00430BFB /* todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = todo.png; path = homeIcons/todo.png; sourceTree = "<group>"; };
 		98F13BB11AB5117A00430BFB /* peer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peer.png; path = homeIcons/peer.png; sourceTree = "<group>"; };
 		98F13BB21AB5117A00430BFB /* total.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = total.png; path = homeIcons/total.png; sourceTree = "<group>"; };
+		98F13BB81AB5141900430BFB /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		CE13988A1AB464BA001D2E66 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		CE1398911AB467F0001D2E66 /* iTeachSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTeachSingleton.h; sourceTree = "<group>"; };
 		CE1398921AB467F0001D2E66 /* iTeachSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTeachSingleton.m; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 		98F13BAD1AB5116F00430BFB /* home */ = {
 			isa = PBXGroup;
 			children = (
+				98F13BB81AB5141900430BFB /* home.png */,
 				98F13BAE1AB5117A00430BFB /* average.png */,
 				98F13BAF1AB5117A00430BFB /* time.png */,
 				98F13BB01AB5117A00430BFB /* todo.png */,
@@ -855,6 +858,7 @@
 				98F13BB51AB5117A00430BFB /* todo.png in Resources */,
 				98F13BA41AB4FDC200430BFB /* settings48.png in Resources */,
 				CE4F8F3D1AB4397E00F5062D /* todo.png in Resources */,
+				98F13BB91AB5141900430BFB /* home.png in Resources */,
 				CE1398CA1AB4D357001D2E66 /* 1.png in Resources */,
 				98F13B671AB4E7DE00430BFB /* park.jpg in Resources */,
 				98F13B9A1AB4FB2300430BFB /* sample_file2.txt in Resources */,

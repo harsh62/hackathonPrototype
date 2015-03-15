@@ -32,14 +32,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row == 3){
-        [self.sideNavigationDelegate sideNavProfileSelected];
+    if(indexPath.row == 0){
+         [self.sideNavigationDelegate homeButtonClicked];
     }
     else if (indexPath.row == 1){
         [self.sideNavigationDelegate profileButtonClicked];
     }
     else if (indexPath.row == 2){
         [self.sideNavigationDelegate connectButtonClicked];
+    }
+    else if (indexPath.row == 3){
+        [self.sideNavigationDelegate sideNavProfileSelected];
     }
     else if (indexPath.row == 4){
         [self.sideNavigationDelegate calendarButtonClicked];
