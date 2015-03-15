@@ -89,7 +89,7 @@ NSArray *nbOfDayMonthbyMonth;
 {
     NSLog(@"didSelectItemAtIndexPath %ld ", (long)indexPath.row );
     
-    if ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)){
+//    if ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)){
 		if ([[self.collectionElements objectAtIndex:indexPath.row] isKindOfClass:[WeekInfo class]]) {
 			WeekInfo *weekInfo = (WeekInfo *)[self.collectionElements objectAtIndex:indexPath.row];
 			
@@ -156,7 +156,7 @@ NSArray *nbOfDayMonthbyMonth;
 			//found it...
 		}
 		
-    }
+//    }
     
 }
 
@@ -1352,8 +1352,8 @@ NSString *prefixImage;
 //    [self changeStory];
 //}
 //
-//- (void) orientationChanged:(NSNotification *)note
-//{
+- (void) orientationChanged:(NSNotification *)note
+{
 //    NSLog(@"month orientationChanged %d ",self.interfaceOrientation );
 //    
 //    NSString *reqSysVer = @"7.0";
@@ -1363,7 +1363,7 @@ NSString *prefixImage;
 //    }else{
 //        [self changeStory];
 //    }
-//}
+}
 
 
 @end

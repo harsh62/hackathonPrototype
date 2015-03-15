@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *collectionCellLabel;
 @property (weak, nonatomic) IBOutlet UILabel *collectionviewDetailCell;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

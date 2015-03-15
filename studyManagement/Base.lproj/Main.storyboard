@@ -1238,7 +1238,8 @@
                                 </view>
                                 <connections>
                                     <outlet property="collectionCellLabel" destination="M08-3r-XBn" id="L8s-IY-4Qh"/>
-                                    <outlet property="collectionviewDetailCell" destination="qfG-so-Whi" id="Stq-IM-XYk"/>
+                                    <outlet property="collectionviewDetailCell" destination="qfG-so-Whi" id="9gU-eu-25o"/>
+                                    <outlet property="imageView" destination="02g-iG-HXJ" id="DTN-mt-JeP"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -2041,52 +2042,6 @@
                                 <items>
                                     <navigationItem id="V4f-6X-VRk">
                                         <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="5y6-j1-AQ2">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Jii-4y-0wD">
-                                                <rect key="frame" x="16" y="0.0" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="btn_header_menu.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="revealMenu:" destination="PRC-PQ-gOG" eventType="touchUpInside" id="ARw-wm-kPE"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="loj-aT-QIK">
-                                            <rect key="frame" x="114" y="0.0" width="93" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <state key="normal" image="logo_strikr_off.png">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="highlighted">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="carlsbergMenu:" destination="PRC-PQ-gOG" eventType="touchUpInside" id="Ipe-Vr-Syd"/>
-                                            </connections>
-                                        </button>
-                                        <barButtonItem key="rightBarButtonItem" title=" " style="plain" id="OFl-1B-dkH">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="xgN-Gd-I6R">
-                                                <rect key="frame" x="260" y="0.0" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="btn_header_compose.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2098,7 +2053,6 @@
                     <connections>
                         <outlet property="allMonthCollectionView" destination="U9s-QN-Txa" id="kYV-cG-w68"/>
                         <outlet property="mainView" destination="4Gd-bg-pLU" id="iv7-wA-UtM"/>
-                        <outlet property="strikrButton" destination="loj-aT-QIK" id="rBK-Kc-glB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hak-oE-OhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2338,52 +2292,6 @@
                                 <items>
                                     <navigationItem id="lSe-5L-jcO">
                                         <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="p5s-9e-iHO">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="B3W-TM-dEF">
-                                                <rect key="frame" x="16" y="0.0" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="btn_header_menu.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="revealMenu:" destination="1Pp-iC-woT" eventType="touchUpInside" id="qE5-j2-8r0"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="wTA-L2-50y">
-                                            <rect key="frame" x="114" y="0.0" width="93" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <state key="normal" image="logo_strikr_off.png">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="highlighted">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="carlsbergMenu:" destination="1Pp-iC-woT" eventType="touchUpInside" id="3E9-9B-1Xi"/>
-                                            </connections>
-                                        </button>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="uuc-hO-SWi">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ocT-Gr-wkZ">
-                                                <rect key="frame" x="260" y="0.0" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="btn_header_compose.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2395,7 +2303,6 @@
                     <connections>
                         <outlet property="listMatchTableView" destination="YmP-Go-TXv" id="Cdp-sS-onL"/>
                         <outlet property="mainView" destination="2Oz-7r-Zi4" id="IxA-2Q-19a"/>
-                        <outlet property="strikrButton" destination="wTA-L2-50y" id="lNr-mS-4k8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcJ-Pd-VQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2447,20 +2354,6 @@
                                                                     <rect key="frame" x="59" y="91" width="16" height="15"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sbB-5q-Jcw">
-                                                                    <rect key="frame" x="29" y="53" width="26" height="41"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <color key="highlightedColor" red="1" green="0.99549219310000003" blue="0.96062992130000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </label>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Matchs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JtZ-za-lod">
-                                                                    <rect key="frame" x="58" y="62" width="68" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="first" id="ef5-bq-h1A">
                                                                     <rect key="frame" x="80" y="91" width="15" height="15"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2482,8 +2375,6 @@
                                                     <outlet property="colorView" destination="P63-UI-WMS" id="f23-MR-ryJ"/>
                                                     <outlet property="dateWeekLabel" destination="6ho-GT-Pbz" id="RTI-bb-5N3"/>
                                                     <outlet property="favoriteImage" destination="Qt3-zi-IEc" id="r7p-9x-U9I"/>
-                                                    <outlet property="matchsTextLabel" destination="JtZ-za-lod" id="DrA-c3-R3W"/>
-                                                    <outlet property="nbMatchsLabel" destination="sbB-5q-Jcw" id="wo5-rM-3kb"/>
                                                 </connections>
                                             </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayCell" id="waY-xL-Apo" customClass="DayCell">
@@ -2564,52 +2455,6 @@
                                 <items>
                                     <navigationItem id="fTA-YQ-XGu">
                                         <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Dsy-iv-Xon">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="HwY-6t-PIk">
-                                                <rect key="frame" x="16" y="0.0" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="btn_header_menu.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="revealMenu:" destination="cq8-ty-GKa" eventType="touchUpInside" id="C6F-Yw-gwE"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="KIz-hR-pzl">
-                                            <rect key="frame" x="114" y="0.0" width="93" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <state key="normal" image="logo_strikr_off.png">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="highlighted">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="carlsbergMenu:" destination="cq8-ty-GKa" eventType="touchUpInside" id="TPa-XJ-hjQ"/>
-                                            </connections>
-                                        </button>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="jU8-ge-4hG">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="umg-ng-P84">
-                                                <rect key="frame" x="260" y="0.0" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="btn_header_compose.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2622,7 +2467,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mainView" destination="fB1-aH-pjQ" id="jTu-fX-L3S"/>
-                        <outlet property="strikrButton" destination="KIz-hR-pzl" id="hLN-f0-kM6"/>
                         <outlet property="weekMainCollectionView" destination="fz2-F1-KTi" id="Ogo-fY-wrB"/>
                     </connections>
                 </viewController>
@@ -2641,8 +2485,6 @@
         <image name="browser8.png" width="64" height="64"/>
         <image name="btn_fleche_verte.png" width="30" height="30"/>
         <image name="btn_header_back.png" width="30" height="30"/>
-        <image name="btn_header_compose.png" width="30" height="30"/>
-        <image name="btn_header_menu.png" width="30" height="30"/>
         <image name="calendar.png" width="128" height="128"/>
         <image name="checkin_green.png" width="30" height="30"/>
         <image name="disconnected.png" width="32" height="32"/>
@@ -2651,7 +2493,6 @@
         <image name="first" width="30" height="30"/>
         <image name="home.png" width="64" height="64"/>
         <image name="ipad_btn_back2.png" width="30" height="30"/>
-        <image name="logo_strikr_off.png" width="30" height="30"/>
         <image name="logout.png" width="128" height="128"/>
         <image name="manchester_city.png" width="30" height="30"/>
         <image name="men14.png" width="32" height="32"/>

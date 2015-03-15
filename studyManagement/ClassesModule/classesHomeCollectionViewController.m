@@ -61,14 +61,16 @@ static NSString * const reuseIdentifier = @"customClassCell";
    NSDictionary *classData = [self.classesArray objectAtIndex:indexPath.row];
     NSDictionary *clsData = [classData valueForKey:@"classData"];
     
-    [cell.collectionCellLabel setText:[clsData valueForKey:@"className"]];
+    [cell.collectionviewDetailCell setText:[clsData valueForKey:@"className"]];
+    
+    [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[clsData valueForKey:@"classStandard"]]]];
 
-    [cell.collectionviewDetailCell setText:[clsData valueForKey:@"classStandard"]];
+    [cell.collectionviewDetailCell setText:[clsData valueForKey:@"className"]];
 
     // Configure the cell
-    
-    cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    cell.layer.borderWidth = 1;
+//    
+//    cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    cell.layer.borderWidth = 1;
     
     return cell;
 }

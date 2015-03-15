@@ -510,8 +510,8 @@ bool isLandscape;
 //    [self changeStory];
 //}
 //
-//- (void) orientationChanged:(NSNotification *)note
-//{
+- (void) orientationChanged:(NSNotification *)note
+{
 //    NSLog(@"month orientationChanged %d ",self.interfaceOrientation );
 //    
 //    NSString *reqSysVer = @"7.0";
@@ -521,5 +521,5 @@ bool isLandscape;
 //    }else{
 //        [self changeStory];
 //    }
-//}
+}
 @end
