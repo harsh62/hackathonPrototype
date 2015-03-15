@@ -146,9 +146,7 @@
     [self.mainHomeTabViewController setSelectedIndex:1];
 }
 
-- (void)signOutButtonClicked{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
+
 - (void)toDoClicked{
     [self moveViewToNormalPosition];
     [self.mainHomeTabViewController setSelectedIndex:2];
@@ -159,18 +157,20 @@
     [self.mainHomeTabViewController setSelectedIndex:3];
 }
 
-- (void)calendarButtonClicked{
-    [self moveViewToNormalPosition];
-    
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"monthView"];
-    [self.navigationController pushViewController:controller animated:YES];
-}
-
 - (void)connectButtonClicked{
     [self moveViewToNormalPosition];
     
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"mpc"];
-    [self.navigationController pushViewController:controller animated:YES];
+    [self.mainHomeTabViewController setSelectedIndex:4];
+}
+
+- (void)calendarButtonClicked{
+    [self moveViewToNormalPosition];
+    [self.mainHomeTabViewController setSelectedIndex:5];
+}
+
+
+- (void)signOutButtonClicked{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

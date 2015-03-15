@@ -126,8 +126,9 @@
   if (![self itemHasReminder:object]) {
     // Add a button as accessory view that says 'Add Reminder'.
     UIButton *addReminderButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    addReminderButton.frame = CGRectMake(0.0, 0.0, 100.0, 30.0);
-    [addReminderButton setTitle:@"Add Reminder" forState:UIControlStateNormal];
+    addReminderButton.frame = CGRectMake(0.0, 0.0, 30.0, 30.0);
+    //[addReminderButton setTitle:@"Add Reminder" forState:UIControlStateNormal];
+      [addReminderButton setImage:[UIImage imageNamed:@"add.png"] forState:UIControlStateNormal];
     
     [addReminderButton addActionblock:^(UIButton *sender) {
       [self addReminderForToDoItem:object];
@@ -140,7 +141,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", object];
     NSArray *reminders = [self.reminders filteredArrayUsingPredicate:predicate];
     EKReminder *reminder = [reminders firstObject];
-    cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"checkmarkOn"] : [UIImage imageNamed:@"checkmarkOff"];
+    cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"checked.png"] : [UIImage imageNamed:@"blank.png"];
     
     if (reminder.dueDateComponents) {
       NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -169,7 +170,7 @@
     // Handle error
   }
   
-  cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"checkmarkOn"] : [UIImage imageNamed:@"checkmarkOff"];
+  cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"checked,png"] : [UIImage imageNamed:@"blank.png"];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

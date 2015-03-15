@@ -59,6 +59,9 @@
 		98F13BA31AB4FDC200430BFB /* men14.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13B9E1AB4FDC200430BFB /* men14.png */; };
 		98F13BA41AB4FDC200430BFB /* settings48.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13B9F1AB4FDC200430BFB /* settings48.png */; };
 		98F13BA51AB4FDC200430BFB /* speech117.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BA01AB4FDC200430BFB /* speech117.png */; };
+		98F13BAA1AB5058700430BFB /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BA71AB5058700430BFB /* add.png */; };
+		98F13BAB1AB5058700430BFB /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BA81AB5058700430BFB /* blank.png */; };
+		98F13BAC1AB5058700430BFB /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F13BA91AB5058700430BFB /* checked.png */; };
 		CE13988B1AB464BA001D2E66 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE13988A1AB464BA001D2E66 /* background.jpg */; };
 		CE1398931AB467F0001D2E66 /* iTeachSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1398921AB467F0001D2E66 /* iTeachSingleton.m */; };
 		CE13989E1AB4B5D6001D2E66 /* key63.png in Resources */ = {isa = PBXBuildFile; fileRef = CE13989C1AB4B5D6001D2E66 /* key63.png */; };
@@ -197,6 +200,9 @@
 		98F13B9E1AB4FDC200430BFB /* men14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = men14.png; path = connectionIcons/men14.png; sourceTree = "<group>"; };
 		98F13B9F1AB4FDC200430BFB /* settings48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings48.png; path = connectionIcons/settings48.png; sourceTree = "<group>"; };
 		98F13BA01AB4FDC200430BFB /* speech117.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech117.png; path = connectionIcons/speech117.png; sourceTree = "<group>"; };
+		98F13BA71AB5058700430BFB /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = todoIcons/add.png; sourceTree = "<group>"; };
+		98F13BA81AB5058700430BFB /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = todoIcons/blank.png; sourceTree = "<group>"; };
+		98F13BA91AB5058700430BFB /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = todoIcons/checked.png; sourceTree = "<group>"; };
 		CE13988A1AB464BA001D2E66 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		CE1398911AB467F0001D2E66 /* iTeachSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTeachSingleton.h; sourceTree = "<group>"; };
 		CE1398921AB467F0001D2E66 /* iTeachSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTeachSingleton.m; sourceTree = "<group>"; };
@@ -559,6 +565,16 @@
 			name = connection;
 			sourceTree = "<group>";
 		};
+		98F13BA61AB5057C00430BFB /* todoIcons */ = {
+			isa = PBXGroup;
+			children = (
+				98F13BA71AB5058700430BFB /* add.png */,
+				98F13BA81AB5058700430BFB /* blank.png */,
+				98F13BA91AB5058700430BFB /* checked.png */,
+			);
+			name = todoIcons;
+			sourceTree = "<group>";
+		};
 		CE1398901AB466C4001D2E66 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -642,6 +658,7 @@
 		CE4F8F201AB41AED00F5062D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				98F13BA61AB5057C00430BFB /* todoIcons */,
 				98F13B9B1AB4FD9000430BFB /* connection */,
 				98F13B661AB4E7DE00430BFB /* park.jpg */,
 				CE1398C01AB4D348001D2E66 /* numbers */,
@@ -788,10 +805,12 @@
 			files = (
 				98DCBB001AB35D8A00AC5D8A /* Main.storyboard in Resources */,
 				98F13B611AB4CFCC00430BFB /* checkmarkOn@2x.png in Resources */,
+				98F13BAB1AB5058700430BFB /* blank.png in Resources */,
 				98F13B5E1AB4CFCC00430BFB /* checkmarkOff.png in Resources */,
 				CE1398D21AB4D357001D2E66 /* 9.png in Resources */,
 				CE1398D01AB4D357001D2E66 /* 7.png in Resources */,
 				CE1398CF1AB4D357001D2E66 /* 6.png in Resources */,
+				98F13BAC1AB5058700430BFB /* checked.png in Resources */,
 				CE1398CD1AB4D357001D2E66 /* 4.png in Resources */,
 				98F13BA21AB4FDC200430BFB /* browser8.png in Resources */,
 				CE1398CC1AB4D357001D2E66 /* 3.png in Resources */,
@@ -822,6 +841,7 @@
 				98F13B601AB4CFCC00430BFB /* checkmarkOn.png in Resources */,
 				CE4F8F3F1AB439BE00F5062D /* logout.png in Resources */,
 				CE13989E1AB4B5D6001D2E66 /* key63.png in Resources */,
+				98F13BAA1AB5058700430BFB /* add.png in Resources */,
 				CE1398D11AB4D357001D2E66 /* 8.png in Resources */,
 				CE4F8F411AB43BB900F5062D /* menuLogo.png in Resources */,
 			);
