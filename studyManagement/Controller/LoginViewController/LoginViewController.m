@@ -32,6 +32,15 @@ CGRect rectTeachLogo;
     [self designButtons];
     
     
+    UISwipeGestureRecognizer *recognizer;
+    
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    [self.signUp addGestureRecognizer:recognizer];
+    [self.loginView addGestureRecognizer:recognizer];
+    [self.view addGestureRecognizer:recognizer];
+    
+    
     [self.loginView setFrame:CGRectMake(self.loginView.frame.origin.x, self.view.frame.size.height, self.loginView.frame.size.width, self.loginView.frame.size.width)];
     [self.signUp setFrame:CGRectMake(self.signUp.frame.origin.x, self.view.frame.size.height, self.signUp.frame.size.width, self.signUp.frame.size.width)];
     
@@ -41,6 +50,36 @@ CGRect rectTeachLogo;
     rectLoginView = self.loginView.frame;
     rectSignUpView = self.signUp.frame;
     rectTeachLogo = self.teachLogo.frame;
+    
+}
+
+-(void) handleSwipeFrom:(UISwipeGestureRecognizer *) recognizer{
+    if(self.loginButton.frame.origin.y == 100){
+        [UIView animateWithDuration:0.4
+                              delay:0.0
+                            options: UIViewAnimationOptionCurveEaseOut
+                         animations:^
+         {
+
+             self.loginButton.frame=rectLoginButton;
+             self.signUpButton.frame =rectSignUpButton;
+             self.loginView.frame =rectLoginView;
+             self.signUp.frame =rectSignUpView;
+             self.teachLogo.frame = rectTeachLogo;
+             
+             [self.signUp setAlpha:0];
+             [self.loginView setAlpha:0];
+             
+             [self.loginButton setAlpha:1.0];
+             [self.signUpButton setAlpha:1.0];
+
+         }
+                         completion:^(BOOL finished)
+         {
+             
+         }];
+    }
+    
     
 }
 
