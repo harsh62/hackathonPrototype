@@ -31,6 +31,11 @@ CGRect rectTeachLogo;
     
     [self designButtons];
     
+    self.textFieldUserName.delegate = self;
+    self.textFieldPassword.delegate = self;
+    self.textFieldSignUpPassword.delegate = self;
+    self.textFieldSignUpUserName.delegate = self;
+    self.textFieldGroupId.delegate = self;
     
     UISwipeGestureRecognizer *recognizer;
     
@@ -288,6 +293,13 @@ CGRect rectTeachLogo;
 -(void)loginOrSignupSuccessfulForUser:(NSString*)userName {
     [self performSegueWithIdentifier:@"loginToContainer" sender:self];
     [[iTeachSingleton sharedManager] setUserName:userName];
+}
+
+#pragma mark text field deligates
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

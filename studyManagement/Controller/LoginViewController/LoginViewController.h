@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController<UITextFieldDelegate>
 //Views
 @property (weak, nonatomic) IBOutlet UIView *landingView;
 @property (weak, nonatomic) IBOutlet UIView *signUp;
